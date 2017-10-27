@@ -18,7 +18,7 @@
 ### Notice
 - Script only work if PUBG is active and mouse isn't showing
 - AutoHotkey (AHK) doesn't need bypass against BattlEye, because AHK is whitelisted. But if AHK reading or writing to any application, it can be banned.
-- Don't use the mouse scroll wheel to scroll between the slots
+- Don't use the mouse scroll wheel to scroll between the weapon slots
 
 ### Controls
   ###### Numpad ON  - With RShift
