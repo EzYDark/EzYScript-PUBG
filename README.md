@@ -1,12 +1,10 @@
 ## Welcome to EzYScript for PUBG (AHK Version)
 
-You can use the [editor on GitHub](https://github.com/EzYDark/EzYScript-PUBG/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+### How to install
+1. Install AutoHotkey (https://autohotkey.com/)
+2. Open EzYScript-PUBG.ahk with AutoHotkey
+3. Open PUBG and go play!
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
 Syntax highlighted code block
