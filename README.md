@@ -5,13 +5,7 @@
 - BunnyHop
 - NoRecoil
   - Loadout Type
-     - By pressing F1 you'll have the NoRecoil feature work on the 1st weapon slot, but not for the 2nd weapon slot
-     - By pressing F2 you'll have the NoRecoil featurework for both slots
-     - For the rest of the slots (Melee, SideArm, Throwables) the NoRecoil feature stops.
-          !! Don't use the mouse scroll wheel to scroll between the slots !!
   - Saving The Recoil Values
-     - By holding RShift press the corresponding Recoil key and it'll save the value in the .txt file below then you will need      to open up the script with the script editor or simply replace the corresponding values to it's corresponding place.
-
 - ADS (Faster aiming)
 - Panic Button (to shut down EzYScript-PUBG.ahk)
 - SelectiveFire (Auto, Burst)
@@ -26,9 +20,19 @@
 - AutoHotkey (AHK) doesn't need bypass against BattlEye, because AHK is whitelisted. But if AHK reading or writing to any application, it can be banned.
 - Don't use the mouse scroll wheel to scroll between the slots
 
-### Jekyll Themes
+### Controls
+  Numpad ON  - RShift +
+  Numpad OFF - Without RShift
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/EzYDark/EzYScript-PUBG/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+- CrouchJump/BunnyHop (Numpad 0)
+- Fire (Numpad 1)
+- NoRecoil + Fire (Numpad 2)
+  - Loadout Type
+      - AR & SR (F1)
+      - AR & AR (F2)
+  - Saving The Recoil Values (RShift + Corresponding Recoil Key)
+- ADS (Numpad 3)
+- SelectiveFire (Numpad .)
 
 ### Support or Contact
 
