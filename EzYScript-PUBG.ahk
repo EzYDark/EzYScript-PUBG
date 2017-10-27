@@ -9,41 +9,38 @@ SetTitleMatchMode, 2
 NameCustomKey1 := "MicroUZI"
 NameCustomKey2 := "TommyGun"
 NameCustomKey3 := "VSS"
+NameCustomKey4 := "Custom"
 NameKey1 := "Ironsight"
 NameKey2 := "Holographic"
-NameKey3 := "Custom"
-NameKey4 := "2x"
-NameKey5 := "4x"
+NameKey3 := "2x"
+NameKey4 := "4x"
 
 ;0/1 VARIABLES
-Fire := 1 ;both "Fire" and "NoRecoil" should either be 1 or 0
-NoRecoil := 1 ;both "Fire" and "NoRecoil" should either be 1 or 0
-ADS := 1
-CrouchJump := 1
+Switch := 0
+Fire := 0
+NoRecoil := 0
+ADS := 0
+CrouchJump := 0
 Bunnyhop := 0
-SelectiveFireSwitch := 0
 LoadoutSwitch := 0 ; "1" for the "AR & SR" loadout & "0" for the "Double AR" loadout
+SelectiveFireSwitch := 0 ; "0" for Auto & "1" for Semi-Auto
 
 ;VALUES
 ;NoRecoil Values
 dyCustomKey1 = 13 ;MicroUZI
 dyCustomKey2 = 39 ;TommyGun
 dyCustomKey3 = 58 ;VSS
+dyCustomKey4 = 50 ;Custom
 dyKey1 = 21 ;Ironsight
 dyKey2 = 23 ;Holographic
-dyKey3 = 35 ;Custom
-dyKey4 = 46 ;2x
-dyKey5 = 43 ;4x
-;GunClip Values
-GunClipSize1 = 10
-GunClipSize2 = 15
+dyKey3 = 46 ;2x
+dyKey4 = 100 ;4x
 ;SleepTime
 SleepTime = 6
 
 ;BUTTONS
 ;Main Binds
-CrouchJumpButton = NumpadIns ;same as Numpad0
-;BunnyHopButton = F4
+JumpButton = NumpadIns ;same as Numpad0
 FireButton = NumpadEnd ;same as Numpad1
 NoRecoilButton = NumpadDown ;same as Numpad2
 ADSButton = NumpadPgdn ;same as Numpad3
@@ -51,18 +48,12 @@ SelectiveFire = NumpadDel ;same as Numpad.
 ;NoRecoil Binds
 CustomKey1 = NumpadLeft ;same as Numpad4
 CustomKey2 = NumpadClear ;same as Numpad5
-CustomKey3 = NumpadRight ;same as Numpad6
-Key1 = NumpadDiv ;same as Numpad/
-Key2 = NumpadMult ;same as Numpad*
-Key3 = NumpadHome ;same as Numpad7
-Key4 = NumpadUp ;same as Numpad8
-Key5 = NumpadPgup ;same as Numpad9
-;GunClip Binds
-GunClip1 = Left
-GunClip2 = Right
-;Jump and Crouch Binds
-JumpSecondary = F3 ;secondary Jump bind
-CrouchSecondary = F4 ;secondary Crouch bind
+CustomKey3 = NumpadRight
+CustomKey4 = NumpadHome ;same as Numpad7
+Key1 = NumpadUp ;same as Numpad8
+Key2 = NumpadPgup ;same as Numpad9
+Key3 = NumpadDiv ;same as Numpad/
+Key4 = NumpadMult ;same as Numpad*
 ;LoadoutType Binds
 ARwSR = F1
 ARwAR = F2
@@ -73,20 +64,16 @@ MeleeWeapon = 4
 Throwables = 5
 SecThrowables = G
 ;Increment Binds
-RecoilValueAdd = NumpadAdd
-RecoilValueSub = NumpadSub
-ClipSizeAdd = Up
-ClipSizeSub = Down
-SleepTimeAdd = PGUP
-SleepTimeSub = PGDN
+RecoilValueAdd = Up
+RecoilValueSub = Down
 
 ;HOTKEYS
 ;Main Hotkeys
-Hotkey, *%CrouchJumpButton%, CrouchJumpButton
-;Hotkey, *%BunnyHopButton%, BunnyHopButton
+Hotkey, *%JumpButton%, JumpButton
 Hotkey, *%FireButton%, FireButton
 Hotkey, *%NoRecoilButton%, NoRecoilButton
 Hotkey, *%ADSButton%, ADSButton
+Hotkey, *%SelectiveFire%, SelectiveFire
 ;NoRecoil Hotkeys
 Hotkey, *%CustomKey1%, CustomKey1
 Hotkey, >+%CustomKey1%, SaveCustomKey1
@@ -94,6 +81,8 @@ Hotkey, *%CustomKey2%, CustomKey2
 Hotkey, >+%CustomKey2%, SaveCustomKey2
 Hotkey, *%CustomKey3%, CustomKey3
 Hotkey, >+%CustomKey3%, SaveCustomKey3
+Hotkey, *%CustomKey4%, CustomKey4
+Hotkey, >+%CustomKey4%, SaveCustomKey4
 Hotkey, *%Key1%, Key1
 Hotkey, >+%Key1%, SaveKey1
 Hotkey, *%Key2%, Key2
@@ -102,15 +91,6 @@ Hotkey, *%Key3%, Key3
 Hotkey, >+%Key3%, SaveKey3
 Hotkey, *%Key4%, Key4
 Hotkey, >+%Key4%, SaveKey4
-Hotkey, *%Key5%, Key5
-Hotkey, >+%Key5%, SaveKey5
-;GunClip Hotkeys
-Hotkey, *%GunClip1%, GunClip1
-Hotkey, >+%GunClip1%, SaveGunClip1
-Hotkey, *%GunClip2%, GunClip2
-Hotkey, >+%GunClip2%, SaveGunClip2
-;GunClip Hotkey
-Hotkey, *%SelectiveFire%, SelectiveFire
 ;LoadoutType Hotkey
 Hotkey, *%ARwSR%, ARwSR
 Hotkey, *%ARwAR%, ARwAR
@@ -125,22 +105,15 @@ Hotkey, *%RecoilValueAdd%, RecoilValueAdd
 Hotkey, ^%RecoilValueAdd%, LessRecoilValueAdd
 Hotkey, *%RecoilValueSub%, RecoilValueSub
 Hotkey, ^%RecoilValueSub%, LessRecoilValueSub
-Hotkey, *%ClipSizeAdd%, ClipSizeAdd
-Hotkey, ^%ClipSizeAdd%, LessClipSizeAdd
-Hotkey, *%ClipSizeSub%, ClipSizeSub
-Hotkey, ^%ClipSizeSub%, LessClipSizeSub
-Hotkey, *%SleepTimeAdd%, SleepTimeAdd
-Hotkey, *%SleepTimeSub%, SleepTimeSub
 
 ;LINE-SKIP
 LineSkip = NumpadEnter
 Hotkey, >+%LineSkip%, LineSkip
 
 ;OBJECTS
-clip := {GunClip1:GunClipSize1, GunClip2:GunClipSize2}
-dy := {CustomKey1:dyCustomKey1, CustomKey2:dyCustomKey2, CustomKey3:dyCustomKey3, Key1:dyKey1, Key2:dyKey2, Key3:dyKey3, Key4:dyKey4, Key5:dyKey5}
-mark = GunClip1
-index = Key1
+dy := {CustomKey1:dyCustomKey1, CustomKey2:dyCustomKey2, CustomKey3:dyCustomKey3, CustomKey4:dyCustomKey4, Key1:dyKey1, Key2:dyKey2, Key3:dyKey3, Key4:dyKey4}
+nullA = Key1
+nullB = Key1
 
 isMouseShown()
 {
@@ -164,24 +137,24 @@ Suspend Off
 Sleep 1
 }
 
-GunClip1:
-GunClip2:
-If (SelectiveFireSwitch){
-    mark := A_ThisLabel
-    ToolTip(mark ": " clip[mark])
-} return
-
 CustomKey1:
 CustomKey2:
 CustomKey3:
+CustomKey4:
 Key1:
 Key2:
 Key3:
 Key4:
-Key5:
-If Fire {
-    index := A_ThisLabel
-    ToolTip(name%index% ": " dy[index])
+If Switch {
+	If Fire {
+		nullA := A_ThisLabel
+		ToolTip(name%nullA% ": " dy[nullA])
+	}
+} else {
+	If Fire {
+		nullB := A_ThisLabel
+		ToolTip(name%nullB% ": " dy[nullB])
+	}
 } return
 
 ;LoadoutTypes
@@ -199,6 +172,8 @@ return
 
 PrimaryWeapon1:
 SendInput, {%PrimaryWeapon1%}
+Switch := True
+dy[nullA]
 If LoadoutSwitch {
     Fire := 1
 } else {
@@ -211,6 +186,8 @@ If LoadoutSwitch {
     Fire := 0
 } else {
     Fire := 1
+	Switch := False
+	dy[nullB]
 } return
 
 SideArm:
@@ -229,7 +206,7 @@ If Fire {
 	Fire := false
 } return
 
-;CrouchJump
+;CrouchJump/BunnyHop
 *~$Space:: 
 If CrouchJump {
 	SendInput, {%JumpSecondary% down}
@@ -247,41 +224,38 @@ If BunnyHop {
 }}} return
 
 #If Fire
-~$*LButton:: 
+~$*LButton::
 If SelectiveFireSwitch {
-	Loop % clip[mark]{ 
-			Sleep %SleepTime%
-			Click
-			if NoRecoil {
-				mouseXY(0, dy[index])
+	Loop 1 { 
+		Sleep %SleepTime%
+		Click
+		if NoRecoil {
+			if Switch {
+				mouseXY(0, dy[nullA])
+			} else {
+				mouseXY(0, dy[nullB])
 			}
+		}
 			
 	}
 } else {
 	while (GetKeyState("LButton","P") and a_index < 1000){
-			Sleep %SleepTime%
-			Click
-			if NoRecoil {
-				mouseXY(0, dy[index])
+		Sleep %SleepTime%
+		Click
+		if NoRecoil {
+			if Switch {
+				mouseXY(0, dy[nullA])
+			} else {
+				mouseXY(0, dy[nullB])
 			}
+		}
 	}
 } return
 
 mouseXY(dx,dy){
 DllCall("mouse_event", "UInt", 0x0001, "UInt", dx, "UInt", dy, "UInt", 0, "UPtr", 0)
 }
-
-SelectiveFire:
-If Fire {
-SelectiveFireSwitch := !SelectiveFireSwitch
-	if (SelectiveFireSwitch){
-		ToolTip("RAPID FIRE")
-	} else {
-		ToolTip("AUTO FIRE")
-	}		
-} return
 #IF
-
 ;Fast ADS
 *RButton::
 if ADS {
@@ -329,6 +303,16 @@ If Fire {
 	ToolTip("Fire & NoRecoil ON")
 	}
 } return
+SelectiveFire:
+If Fire {
+SelectiveFireSwitch := !SelectiveFireSwitch
+	if (SelectiveFireSwitch){
+		ToolTip("Semi-Automatic")
+	} else {
+		ToolTip("Automatic")
+	}		
+} return
+#IF
 ADSButton:
     if ADS {
         ADS := 0
@@ -337,7 +321,7 @@ ADSButton:
         ADS := 1
         ToolTip("ADS ON")
     } return
-CrouchJumpButton:
+JumpButton:
     if CrouchJump {
         CrouchJump := 0
 		BunnyHop := 1
@@ -347,76 +331,59 @@ CrouchJumpButton:
         CrouchJump := 1
         ToolTip("CrouchJump")
     } return
-	
-SleepTimeAdd:
-SleepTime += 1
-ToolTip("Time: " SleepTime)
-return
-
-SleepTimeSub:
-SleepTime -= 1
-ToolTip("Time: " SleepTime)
-return
 
 ;Increments
 RecoilValueAdd:
 If Fire {
-    dy[index] += 2
-    ToolTip(name%index% ": " dy[index])
+If Switch {
+	dy[nullA] += 2
+	ToolTip(name%nullA% ": " dy[nullA])
+} else {
+	dy[nullB] += 2
+	ToolTip(name%nullB% ": " dy[nullB])
+}
 } return
 
 RecoilValueSub:
 If Fire {
-    if(dy[index] > 2){
-        dy[index] -= 2
-        ToolTip(name%index% ": " dy[index])
-		}
+If Switch {
+	if(dy[nullA] > 2) {
+		dy[nullA] -= 2
+		ToolTip(name%nullA% ": " dy[nullA])
+	}
+} else {
+	if(dy[nullB] > 2) {
+		dy[nullB] -= 2
+		ToolTip(name%nullB% ": " dy[nullB])
+	}
+}
 } return
 
 LessRecoilValueAdd:
 If Fire {
-    dy[index] += 1
-    ToolTip(name%index% ": " dy[index])
+If Switch {
+	dy[nullA] += 1
+	ToolTip(name%nullA% ": " dy[nullA])
+} else {
+	dy[nullB] += 1
+	ToolTip(name%nullB% ": " dy[nullB])
+}
 } return
 
 LessRecoilValueSub:
 If Fire {
-    if(dy[index] > 1){
-        dy[index] -= 1
-        ToolTip(name%index% ": " dy[index])
-		}
-} return
-
-;GunClip Controls
-ClipSizeAdd:
-If SelectiveFireSwitch {
-    clip[mark] += 2
-    ToolTip(mark ": " clip[mark])
-} return
-
-ClipSizeSub:
-If SelectiveFireSwitch {
-    if(clip[mark] > 2){
-        clip[mark] -= 2
-        ToolTip(mark ": " clip[mark])
-		}
-}
-return
-LessClipSizeAdd:
-If SelectiveFireSwitch {
-    clip[mark] += 1
-    ToolTip(mark ": " clip[mark])
-}
-return
-
-LessClipSizeSub:
-If SelectiveFireSwitch {
-    if(clip[mark] > 1){
-        clip[mark] -= 1
-        ToolTip(mark ": " clip[mark])
+If Switch {
+	if(dy[nullA] > 1) {
+		dy[nullA] -= 1
+		ToolTip(name%nullA% ": " dy[nullA])
+	}
+} else {
+	if(dy[nullB] > 1) {
+		dy[nullB] -= 1
+		ToolTip(name%nullB% ": " dy[nullB])
 	}
 }
-return
+} return
 
 ToolTip(label){
   ToolTip, %label%, 930, 650
@@ -441,6 +408,10 @@ SaveCustomKey3:
 ToolTip("(" NameCustomKey3 ": " dy.CustomKey3 ") SAVED")
 FileAppend, % NameCustomKey3 " = " dy.CustomKey3 "`n", SavedKeys.txt
 return
+SaveCustomKey4:
+ToolTip("(" NameCustomKey4 ": " dy.CustomKey4 ") SAVED")
+FileAppend, % NameCustomKey4 " = " dy.CustomKey4 "`n", SavedKeys.txt
+return
 SaveKey1:
 ToolTip("("NameKey1 ": " dy.Key1 ") SAVED")
 FileAppend, % NameKey1 " = " dy.Key1 "`n", SavedKeys.txt
@@ -457,18 +428,6 @@ SaveKey4:
 ToolTip("("NameKey4 ": " dy.Key4 ") SAVED")
 FileAppend, % NameKey4 " = " dy.Key4 "`n", SavedKeys.txt
 return
-SaveKey5:
-ToolTip("("NameKey5 ": " dy.Key5 ") SAVED")
-FileAppend, % NameKey5 " = " dy.Key5 "`n", SavedKeys.txt
-return
-SaveGunClip1:
-ToolTip("(GunClip 1: " clip.GunClip1 ") SAVED")
-FileAppend, % "GunClip 1 Size = " clip.GunClip1 "`n", SavedKeys.txt
-return
-SaveGunClip2:
-ToolTip("(GunClip 2: " clip.GunClip2 ") SAVED")
-FileAppend, % "GunClip 2 Size = " clip.GunClip2 "`n", SavedKeys.txt
-return
 LineSkip:
 ToolTip("Line Skipped")
 FileAppend, `n, SavedKeys.txt
@@ -477,3 +436,6 @@ return
 F10::
 ComObjCreate("SAPI.SpVoice").Speak("exit")
 Exitapp
+
+
+;;;CREATED BY EZYDARK;;;
