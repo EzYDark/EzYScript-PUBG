@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Welcome to EzYScript for PUBG (AHK Version)
 
 You can use the [editor on GitHub](https://github.com/EzYDark/EzYScript-PUBG/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
