@@ -33,6 +33,7 @@
   - Saving The Recoil Values (RShift + Corresponding Recoil Key)
 - ADS (Numpad 3)
 - SelectiveFire (Numpad .)
+- Panic Button (F10)
 
 ### Support or Contact
 
