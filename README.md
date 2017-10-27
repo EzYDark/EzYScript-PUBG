@@ -5,6 +5,11 @@
 2. Open EzYScript-PUBG.ahk with AutoHotkey
 3. Open PUBG and go play!
 
+### Notice
+- Script only work if PUBG is active and mouse isn't showing
+- AutoHotkey (AHK) doesn't need bypass against BattlEye, because AHK is whitelisted. But if AHK reading or writing to any application, it can be banned.
+
+
 
 ```markdown
 Syntax highlighted code block
