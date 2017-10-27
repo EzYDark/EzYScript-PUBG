@@ -27,10 +27,22 @@
 - CrouchJump/BunnyHop (Numpad 0)
 - Fire (Numpad 1)
 - NoRecoil + Fire (Numpad 2)
+  - NoRecoil value UP (Arrow UP)
+  - NoRecoil value DOWN (Arrow DOWN)
   - Loadout Type
       - AR & SR (F1)
       - AR & AR (F2)
   - Saving The Recoil Values (RShift + Corresponding Recoil Key)
+  - Custom Recoil Rates
+      - MicroUZI (Numpad 4)
+      - Tommy Gun (Numpad 5)
+      - VSS (Numpad 6)
+      - Custom (Numpad 7)
+  - Recoil Rates
+      -Iron Sight (Numpad 8)
+      -Holographic Sight/Red Dot Sight (Numpad 9)
+      -2x Scope (Numpad /)
+      -4x Scope (Numpad *)
 - ADS (Numpad 3)
 - SelectiveFire (Numpad .)
 - Panic Button (F10)
