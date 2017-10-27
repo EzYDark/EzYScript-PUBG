@@ -15,7 +15,6 @@
 - ADS (Faster aiming)
 - Panic Button (to shut down EzYScript-PUBG.ahk)
 - SelectiveFire (Auto, Burst)
-- 
 
 ### How to install
 1. Install AutoHotkey (https://autohotkey.com/)
@@ -26,27 +25,6 @@
 - Script only work if PUBG is active and mouse isn't showing
 - AutoHotkey (AHK) doesn't need bypass against BattlEye, because AHK is whitelisted. But if AHK reading or writing to any application, it can be banned.
 - Don't use the mouse scroll wheel to scroll between the slots
-
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Jekyll Themes
 
