@@ -1,5 +1,14 @@
 ## Welcome to EzYScript for PUBG (AHK Version)
 
+### Available Features
+- CrouchJump (Bigger jump)
+- BunnyHop
+- NoRecoil
+- ADS (Faster aiming)
+- Panic Button (to shut down EzYScript-PUBG.ahk)
+- Fire (Auto, Burst)
+- 
+
 ### How to install
 1. Install AutoHotkey (https://autohotkey.com/)
 2. Open EzYScript-PUBG.ahk with AutoHotkey
