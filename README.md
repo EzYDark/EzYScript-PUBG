@@ -21,8 +21,8 @@
 - Don't use the mouse scroll wheel to scroll between the slots
 
 ### Controls
-  Numpad ON  - RShift +
-  Numpad OFF - Without RShift
+ - Numpad ON  - RShift +
+ - Numpad OFF - Without RShift
 
 - CrouchJump/BunnyHop (Numpad 0)
 - Fire (Numpad 1)
