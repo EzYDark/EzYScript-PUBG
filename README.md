@@ -49,3 +49,4 @@
 
 ## Created by EzYDark
 ### Discord: https://discord.gg/GaeANq3
+### Donate: https://paypal.me/EzYDark
