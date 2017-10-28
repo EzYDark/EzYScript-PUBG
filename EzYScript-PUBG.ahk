@@ -1,4 +1,9 @@
-﻿#NoEnv
+﻿; CREATED BY EZYDARK
+; Discord: https://discord.gg/GaeANq3
+; Donate: https://paypal.me/EzYDark
+
+
+#NoEnv
 #SingleInstance force
 #MaxThreadsBuffer on
 SetWorkingDir %A_ScriptDir%
@@ -20,8 +25,8 @@ Switch := 0
 Fire := 0
 NoRecoil := 0
 ADS := 0
-CrouchJump := 0
-Bunnyhop := 0
+CrouchJump := 1
+BunnyHop := 0
 LoadoutSwitch := 0 ; "1" for the "AR & SR" loadout & "0" for the "Double AR" loadout
 SelectiveFireSwitch := 0 ; "0" for Auto & "1" for Semi-Auto
 
@@ -209,10 +214,8 @@ If Fire {
 ;CrouchJump/BunnyHop
 *~$Space:: 
 If CrouchJump {
-	SendInput, {%JumpSecondary% down}
-	SendInput, {%CrouchSecondary% down}
-	SendInput, {%JumpSecondary% up}
-	SendInput, {%CrouchSecondary% up}
+	SendInput, {Space}
+	SendInput, {C}
 } else {
 If BunnyHop {
 	Loop
@@ -438,4 +441,6 @@ ComObjCreate("SAPI.SpVoice").Speak("exit")
 Exitapp
 
 
-;;;CREATED BY EZYDARK;;;
+; CREATED BY EZYDARK
+; Discord: https://discord.gg/GaeANq3
+; Donate: https://paypal.me/EzYDark
