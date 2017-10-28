@@ -21,8 +21,8 @@
 - Don't use the mouse scroll wheel to scroll between the weapon slots
 
 ### Controls
-  ###### Numpad ON  - With RShift
-  ###### Numpad OFF - Without RShift
+  ###### Numpad ON  - With Shift
+  ###### Numpad OFF - Without Shift
 
 - CrouchJump/BunnyHop (Numpad 0)
 - Fire (Numpad 1)
