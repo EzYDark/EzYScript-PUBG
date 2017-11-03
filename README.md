@@ -4,7 +4,7 @@
 - CrouchJump (Bigger jump)
 - BunnyHop
 - NoRecoil
-  - Loadout Type
+  - Loadout Typee
   - Saving The Recoil Values
 - ADS (Faster aiming)
 - Panic Button (to shut down EzYScript-PUBG.ahk)
