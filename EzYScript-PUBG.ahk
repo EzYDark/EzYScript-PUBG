@@ -52,7 +52,7 @@ SelectiveFire = NumpadDel ;same as Numpad.
 ;NoRecoil Binds
 CustomKey1 = NumpadLeft ;same as Numpad4
 CustomKey2 = NumpadClear ;same as Numpad5
-CustomKey3 = NumpadRight
+CustomKey3 = NumpadRight ;same as Numpad6
 CustomKey4 = NumpadHome ;same as Numpad7
 Key1 = NumpadUp ;same as Numpad8
 Key2 = NumpadPgup ;same as Numpad9
