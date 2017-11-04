@@ -1,6 +1,7 @@
 ## Welcome to EzYScript for PUBG (AHK Version)
 
 ### Available Features
+- Interactive Map
 - CrouchJump (Bigger jump)
 - BunnyHop
 - NoRecoil
@@ -23,6 +24,7 @@
   ###### Numpad ON  - With Shift
   ###### Numpad OFF - Without Shift
 
+- Interactive Map (RShift + M)
 - CrouchJump/BunnyHop (Numpad 0)
 - Fire (Numpad 1)
 - NoRecoil + Fire (Numpad 2)

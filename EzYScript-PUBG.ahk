@@ -8,7 +8,39 @@
 #MaxThreadsBuffer on
 SetWorkingDir %A_ScriptDir%
 SetTitleMatchMode, 2
-#ifwinactive, PLAYERUNKNOWN'S BATTLEGROUNDS
+#If WinActive("EzYMap - PUBG") or WinActive("PLAYERUNKNOWN'S BATTLEGROUNDS")
+
+
+;GUI - MAP
+Gui, -Caption +ToolWindow +owner -border
+Gui Color, Black
+Gui Add, ActiveX, x0 y0 w%A_ScreenWidth% h%A_ScreenHeight%, https://pubgmap.io/
+Gui Show, Minimize x0 y0 w%A_ScreenWidth% h%A_ScreenHeight%, EzYMap - PUBG
+WinSet, Transparent, 175, EzYMap - PUBG
+
+GuiClose:
+Gui Minimize
+Return
+
++M::
+IfWinNotActive, EzYMap - PUBG
+{
+	Gui Show
+	WinActivate, EzYMap - PUBG
+} 
+else
+{
+IfWinActive, EzYMap - PUBG
+	Gui Minimize
+	WinActivate, PLAYERUNKNOWN'S BATTLEGROUNDS
+} 
+Return
+
+ESC::
+Gui Minimize
+WinActivate, PLAYERUNKNOWN'S BATTLEGROUNDS
+return
+
 
 ;NAME YOUR KEYS
 NameCustomKey1 := "MicroUZI"
