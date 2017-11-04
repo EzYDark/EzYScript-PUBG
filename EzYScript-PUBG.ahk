@@ -21,6 +21,7 @@ NameKey3 := "2x"
 NameKey4 := "4x"
 
 ;0/1 VARIABLES
+Switch := 0
 Fire := 0
 NoRecoil := 0
 ADS := 1
@@ -51,15 +52,13 @@ SelectiveFire = NumpadDel ;same as Numpad.
 ;NoRecoil Binds
 CustomKey1 = NumpadLeft ;same as Numpad4
 CustomKey2 = NumpadClear ;same as Numpad5
-CustomKey3 = NumpadRight ;same as Numpad6
+CustomKey3 = NumpadRight
 CustomKey4 = NumpadHome ;same as Numpad7
 Key1 = NumpadUp ;same as Numpad8
 Key2 = NumpadPgup ;same as Numpad9
 Key3 = NumpadDiv ;same as Numpad/
 Key4 = NumpadMult ;same as Numpad*
 ;LoadoutType Binds
-PrimaryWeapon1 = 1
-PrimaryWeapon2 = 2
 SideArm = 3
 MeleeWeapon = 4
 Throwables = 5
@@ -142,8 +141,19 @@ Key1:
 Key2:
 Key3:
 Key4:
+If Switch {
+	If Fire {
+		nullA := A_ThisLabel
+		ToolTip(name%nullA% ": " dy[nullA])
+	}
+} else {
+	If Fire {
+		nullB := A_ThisLabel
+		ToolTip(name%nullB% ": " dy[nullB])
+	}
+} return
 
-
+;LoadoutTypes
 SideArm:
 SendInput, {%SideArm%}
 If Fire {
