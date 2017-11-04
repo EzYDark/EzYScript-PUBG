@@ -21,13 +21,11 @@ NameKey3 := "2x"
 NameKey4 := "4x"
 
 ;0/1 VARIABLES
-Switch := 0
 Fire := 0
 NoRecoil := 0
-ADS := 0
+ADS := 1
 CrouchJump := 1
 BunnyHop := 0
-LoadoutSwitch := 0 ; "1" for the "AR & SR" loadout & "0" for the "Double AR" loadout
 SelectiveFireSwitch := 0 ; "0" for Auto & "1" for Semi-Auto
 
 ;VALUES
@@ -53,15 +51,13 @@ SelectiveFire = NumpadDel ;same as Numpad.
 ;NoRecoil Binds
 CustomKey1 = NumpadLeft ;same as Numpad4
 CustomKey2 = NumpadClear ;same as Numpad5
-CustomKey3 = NumpadRight
+CustomKey3 = NumpadRight ;same as Numpad6
 CustomKey4 = NumpadHome ;same as Numpad7
 Key1 = NumpadUp ;same as Numpad8
 Key2 = NumpadPgup ;same as Numpad9
 Key3 = NumpadDiv ;same as Numpad/
 Key4 = NumpadMult ;same as Numpad*
 ;LoadoutType Binds
-ARwSR = F1
-ARwAR = F2
 PrimaryWeapon1 = 1
 PrimaryWeapon2 = 2
 SideArm = 3
@@ -97,10 +93,6 @@ Hotkey, >+%Key3%, SaveKey3
 Hotkey, *%Key4%, Key4
 Hotkey, >+%Key4%, SaveKey4
 ;LoadoutType Hotkey
-Hotkey, *%ARwSR%, ARwSR
-Hotkey, *%ARwAR%, ARwAR
-Hotkey, *$%PrimaryWeapon1%, PrimaryWeapon1
-Hotkey, *$%PrimaryWeapon2%, PrimaryWeapon2
 Hotkey, *$%SideArm%, SideArm
 Hotkey, *$%MeleeWeapon%, MeleeWeapon
 Hotkey, *$%Throwables%, Throwables
@@ -150,50 +142,7 @@ Key1:
 Key2:
 Key3:
 Key4:
-If Switch {
-	If Fire {
-		nullA := A_ThisLabel
-		ToolTip(name%nullA% ": " dy[nullA])
-	}
-} else {
-	If Fire {
-		nullB := A_ThisLabel
-		ToolTip(name%nullB% ": " dy[nullB])
-	}
-} return
 
-;LoadoutTypes
-;Only use "1" and "2" for switching between your primary weapons, NO MOUSE SCROLL
-ARwSR: ;for (AR_PrimaryWeapon1/SR_PrimaryWeapon2) loadout
-LoadoutSwitch := True
-ToolTip("AR & SR")
-return
-
-ARwAR: ;for (double AR) loadout
-Fire := !Fire
-LoadoutSwitch := False
-ToolTip("AR & AR")
-return
-
-PrimaryWeapon1:
-SendInput, {%PrimaryWeapon1%}
-Switch := True
-dy[nullA]
-If LoadoutSwitch {
-    Fire := 1
-} else {
-    Fire := 1
-} return
-
-PrimaryWeapon2:
-SendInput, {%PrimaryWeapon2%}
-If LoadoutSwitch {
-    Fire := 0
-} else {
-    Fire := 1
-	Switch := False
-	dy[nullB]
-} return
 
 SideArm:
 SendInput, {%SideArm%}

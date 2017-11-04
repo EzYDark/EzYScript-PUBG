@@ -4,7 +4,6 @@
 - CrouchJump (Bigger jump)
 - BunnyHop
 - NoRecoil
-  - Loadout Type
   - Saving The Recoil Values
 - ADS (Faster aiming)
 - Panic Button (to shut down EzYScript-PUBG.ahk)
@@ -29,9 +28,6 @@
 - NoRecoil + Fire (Numpad 2)
   - NoRecoil value UP (Arrow UP)
   - NoRecoil value DOWN (Arrow DOWN)
-  - Loadout Type
-      - AR & SR (F1)
-      - AR & AR (F2)
   - Saving The Recoil Values (RShift + Corresponding Recoil Key)
   - Custom Recoil Rates
       - MicroUZI (Numpad 4)
