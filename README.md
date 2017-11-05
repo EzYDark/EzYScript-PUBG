@@ -24,7 +24,7 @@
   ###### Numpad ON  - With Shift
   ###### Numpad OFF - Without Shift
 
-- Interactive Map (RShift + M)
+- Interactive Map (N)
 - CrouchJump/BunnyHop (Numpad 0)
 - Fire (Numpad 1)
 - NoRecoil + Fire (Numpad 2)
