@@ -1,3 +1,5 @@
+# Don't use it! It's detected! AHK, Macros and editing .INI files is in blacklist.
+
 ## Welcome to EzYScript for PUBG (AHK Version)
 
 ### Available Features
